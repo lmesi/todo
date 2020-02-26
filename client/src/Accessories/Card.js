@@ -2,9 +2,20 @@ import React from "react";
 import "./Card.css"
 
 const Card = (props) =>{
+    console.log("Card:")
+    console.log(props.apiResponse)
+    /*let todos = [];
+    props.apiResponse.todos.forEach(element => {
+        todos.push(
+            <label className="container">{element.content}
+                <input type="checkbox" />
+                <span className="checkmark"></span>
+            </label>
+        )
+    });*/
     return (
         <div className="Card">
-            <h4>{props.apiResponse}</h4>
+            <h4>Title</h4>
             <label className="container">One
                 <input type="checkbox" />
                 <span className="checkmark"></span>
@@ -17,7 +28,7 @@ const Card = (props) =>{
                 <input type="checkbox" />
                 <span className="checkmark"></span>
             </label>
-            <button className="modButton">Create</button>
+            <button className="modButton">Modify</button>
         </div>
     )
 }

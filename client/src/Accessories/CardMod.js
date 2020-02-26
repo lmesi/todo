@@ -1,9 +1,11 @@
 import React from "react";
+import "./Card.css"
 
-const CardMod = () =>{
+const CardMod = (props) =>{
+    
     return (
-        <div>
-            
+        <div className="Card">
+            <input type="text"></input>
         </div>
     )
 }
