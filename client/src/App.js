@@ -7,7 +7,7 @@ function App() {
   const callAPI = () => {
     fetch("http://localhost:9000/testAPI")
       .then(res => res.json())
-      .then(res => setApiResponse(res.title));
+      .then(res => setApiResponse(res.first.title));
   }
 
   useEffect(() => {

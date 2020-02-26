@@ -1,26 +1,18 @@
 const express = require("express");
 const router = express.Router();
-
-let todo = {
-  title: "First todo title",
-  todos: [
-    {
-      completed: false,
-      content: "valami"
-    },
-    {
-      completed: true,
-      content: "alma"
-    },
-    {
-      completed: false,
-      content: "körte"
-    }
-  ]
-}
+const fs = require('fs');
+let todo;
+fs.readFile('./data.json', 'utf8', function (err, data) {
+  if (err) throw err;
+  try {
+    todo = JSON.parse(data);
+  } catch (e) {
+    console.error( e );
+  }
+});
 
 router.get("/", (req, res, next) => {
-  res.send(todo)
+  res.send(JSON.stringify(todo));
 });
 
 module.exports = router;

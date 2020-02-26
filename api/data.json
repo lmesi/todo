@@ -1,0 +1,36 @@
+{
+  "first": {
+    "title":"First todo title",
+    "todos": [
+    {
+      "completed": false,
+      "content": "valami"
+    },
+    {
+      "completed": true,
+      "content": "alma"
+    },
+    {
+      "completed": false,
+      "content": "körte"
+    }
+    ]
+  },
+  "second": {
+    "title":"First todo title",
+    "todos": [
+    {
+      "completed": false,
+      "content": "valami"
+    },
+    {
+      "completed": true,
+      "content": "alma"
+    },
+    {
+      "completed": false,
+      "content": "körte"
+    }
+    ]
+  }
+}
