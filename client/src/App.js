@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Main from './Routes/Main'
+import ModiCreate from './Routes/ModiCreate'
 
 function App() {
   const [data, setData] = useState("");
@@ -17,7 +19,17 @@ function App() {
   console.log(data)
 
   return (
+    <BrowserRouter>
+    <Switch>
+    <Route path="/" exact >
       <Main data={data}/>
+    </Route>
+    <Route path="/modiCreate" exact >
+      <ModiCreate/>
+    </Route>
+
+    </Switch>
+    </BrowserRouter>
   );
 }
 

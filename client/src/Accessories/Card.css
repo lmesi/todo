@@ -6,6 +6,7 @@
   width: fit-content;
   border-radius: 8px;
   display: inline-block;
+  max-width: 680px;
 }
 
 .Card:hover {
@@ -83,6 +84,21 @@
 /* Modify button*/
 
 .modButton {
-  margin-bottom: 8px;
-  right: 0;
+  margin: 16px;
+}
+
+.inputField {
+  margin: 16px;
+  width: 600px;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.saveBtn {
+  margin: 16px;
+}
+
+.editable {
+  margin: 16px;
+  border-radius: 8px;
 }
