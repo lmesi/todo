@@ -1,5 +1,6 @@
 {
-  "first": {
+  "modified":"",
+  "data":[{
     "title":"First todo title",
     "todos": [
     {
@@ -16,8 +17,8 @@
     }
     ]
   },
-  "second": {
-    "title":"First todo title",
+  {
+    "title":"Second todo title",
     "todos": [
     {
       "completed": false,
@@ -32,5 +33,5 @@
       "content": "körte"
     }
     ]
-  }
+  }]
 }

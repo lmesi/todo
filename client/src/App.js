@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import Main from './Routes/Main'
 
 function App() {
-  const [apiResponse, setApiResponse] = useState("");
+  const [data, setData] = useState("");
   const callAPI = () => {
     fetch("http://localhost:9000/testAPI")
-      .then(res => res.text())
-      .then(res => setApiResponse(res))
+      .then(res => res.json())
+      .then(res => setData(res.data))
   }
 
   useEffect(() => {
@@ -14,10 +14,10 @@ function App() {
   }, [])
 
   console.log("App: ")
-  console.log(apiResponse)
+  console.log(data)
 
   return (
-      <Main apiResponse={apiResponse}/>
+      <Main data={data}/>
   );
 }
 

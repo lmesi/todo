@@ -3,31 +3,24 @@ import "./Card.css"
 
 const Card = (props) =>{
     console.log("Card:")
-    console.log(props.apiResponse)
-    /*let todos = [];
-    props.apiResponse.todos.forEach(element => {
-        todos.push(
-            <label className="container">{element.content}
-                <input type="checkbox" />
-                <span className="checkmark"></span>
-            </label>
-        )
-    });*/
+    console.log(props.todo)
+    let list = [];
+    let i = 0;
+    const uploadList = ( todo ) => {
+        todo.todos.map(element => {
+            list.push(
+                <label className="container" key={i++}>{element.content}
+                    <input type="checkbox" />
+                    <span className="checkmark"></span>
+                </label>
+            )
+        });
+        return list;
+    }
     return (
         <div className="Card">
-            <h4>Title</h4>
-            <label className="container">One
-                <input type="checkbox" />
-                <span className="checkmark"></span>
-            </label>
-            <label className="container">Two
-                <input type="checkbox" />
-                <span className="checkmark"></span>
-            </label>
-            <label className="container">Three
-                <input type="checkbox" />
-                <span className="checkmark"></span>
-            </label>
+            <h4>{ props.todo.title }</h4>
+            {uploadList( props.todo )}
             <button className="modButton">Modify</button>
         </div>
     )
