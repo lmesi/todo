@@ -14,10 +14,9 @@ const CardMod = (props) =>{
                 className="inputField" 
                 onKeyPress={
                     (e) => {
-                        console.log(e.key)
                         if (e.key === 'Enter') {
                             console.log('do validate');
-                          }
+                        }
                     }
                 }
             />

@@ -85,6 +85,7 @@
 
 .modButton {
   margin: 16px;
+  float: right;
 }
 
 .inputField {
@@ -96,6 +97,7 @@
 
 .saveBtn {
   margin: 16px;
+  float: right;
 }
 
 .editable {
